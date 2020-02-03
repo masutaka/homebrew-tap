@@ -1,13 +1,13 @@
 class GithubNippou < Formula
   homepage 'https://github.com/masutaka/github-nippou'
-  version 'v4.1.1'
+  version 'v4.1.2'
 
   if Hardware::CPU.is_64_bit?
-    url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.1/github-nippou_v4.1.1_darwin_amd64.zip'
-    sha256 '05c94cf4c10d507e9766549eb39b918c40d3f4f5e647f6adf63344739874c66b'
+    url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.2/github-nippou_v4.1.2_darwin_amd64.zip'
+    sha256 'b8ce9d99fc6e90ca036bdc00a218b1314652034aedafa47f1d51ef19331bc8b5'
   else
-    url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.1/github-nippou_v4.1.1_darwin_386.zip'
-    sha256 '2b3e064bd87de97dce2464e0336e42372dfddfae70a7231737ca3f5793f8e66d'
+    url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.2/github-nippou_v4.1.2_darwin_386.zip'
+    sha256 '970bce582933cfdc5fea82a0ed83e70de22d61b26736c3daf7a1cf103c6f379f'
   end
 
   def install
