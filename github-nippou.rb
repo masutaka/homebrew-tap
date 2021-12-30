@@ -1,8 +1,8 @@
 class GithubNippou < Formula
   homepage 'https://github.com/masutaka/github-nippou'
-  version 'v4.1.4'
-  url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.4/github-nippou_v4.1.4_darwin_amd64.zip'
-  sha256 '2bb53572bded55609ec3f1d80e75f4bf5877233fb02716e555538acfe18fc10a'
+  version 'v4.1.5'
+  url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.5/github-nippou_v4.1.5_darwin_amd64.zip'
+  sha256 '3c2d3a44bf79e37fa2fad7db2529cc1f5b4f56fd90e5b5bdc5ddca50f8ebc1f1'
 
   def install
     bin.install 'github-nippou'
