@@ -1,4 +1,5 @@
 class GithubNippou < Formula
+  desc "github-nippou prints today's your GitHub action"
   homepage 'https://github.com/masutaka/github-nippou'
   version 'v4.1.11'
   license 'MIT'
