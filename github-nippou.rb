@@ -5,8 +5,14 @@ class GithubNippou < Formula
   license 'MIT'
 
   on_macos do
-    url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.12/github-nippou_v4.1.12_darwin_amd64.zip'
-    sha256 '29a35a5cb02c6a600c114b800da5e5fb8c98a09f8f30334c08b93815390130f8'
+    case
+    when Hardware::CPU.arm?
+      url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.12/github-nippou_v4.1.12_darwin_arm64.zip'
+      sha256 'a6c853d81de8feb247ecafa37211dd840578744ed20c15ede941b819f2b87311'
+    when Hardware::CPU.intel?
+      url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.12/github-nippou_v4.1.12_darwin_amd64.zip'
+      sha256 '29a35a5cb02c6a600c114b800da5e5fb8c98a09f8f30334c08b93815390130f8'
+    end
   end
 
   on_linux do
