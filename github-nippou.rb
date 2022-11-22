@@ -1,6 +1,7 @@
 class GithubNippou < Formula
   homepage 'https://github.com/masutaka/github-nippou'
   version 'v4.1.11'
+  license 'MIT'
 
   on_macos do
     url 'https://github.com/masutaka/github-nippou/releases/download/v4.1.11/github-nippou_v4.1.11_darwin_amd64.zip'
