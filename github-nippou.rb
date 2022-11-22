@@ -6,6 +6,18 @@ class GithubNippou < Formula
 
   def install
     bin.install 'github-nippou'
+
+    # Install bash completion
+    output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'bash')
+    (bash_completion/'github-nippou').write output
+
+    # Install fish completion
+    output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'fish')
+    (fish_completion/'github-nippou.fish').write output
+
+    # Install zsh completion
+    output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'zsh')
+    (zsh_completion/'_github-nippou').write output
   end
 
   test do
