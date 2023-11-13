@@ -16,7 +16,11 @@ class GithubNippou < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
+    case
+    when Hardware::CPU.arm?
+      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.10/github-nippou_v4.2.10_linux_arm64.zip'
+      sha256 '27fabe1448479179afc74f9b768d236827564d8ab5206938001b01e1a77c5e3b'
+    when Hardware::CPU.intel?
       url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.10/github-nippou_v4.2.10_linux_amd64.zip'
       sha256 'a23df2b5ee9451b94e9cbda4e6fcbdbaccedc0e567d31bceef789c8fdf24287c'
     end
