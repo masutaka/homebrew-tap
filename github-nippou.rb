@@ -1,24 +1,24 @@
 class GithubNippou < Formula
   desc "Print today's your GitHub activity for issues and pull requests"
   homepage 'https://github.com/masutaka/github-nippou'
-  version 'v4.2.9'
+  version '4.2.10'
   license 'MIT'
 
   on_macos do
     case
     when Hardware::CPU.arm?
-      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.9/github-nippou_v4.2.9_darwin_arm64.zip'
-      sha256 '0b73c416b947b8e28d8282dfa1cad7069eefdd43583a1bde42ca146bfab3009e'
+      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.10/github-nippou_v4.2.10_darwin_arm64.zip'
+      sha256 'dcbc2cdd3286c16aea0f2d557b510d823abafbbe20d5ba9f86724ebb5cfb8bf1'
     when Hardware::CPU.intel?
-      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.9/github-nippou_v4.2.9_darwin_amd64.zip'
-      sha256 'a0561ad69bcbf34ff89b1f80504e68a66fe8a5678f89602a4be2a55f2a4a89a0'
+      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.10/github-nippou_v4.2.10_darwin_amd64.zip'
+      sha256 'bb899e023a334e80a0de7f123be5982a2f55de22e5d9cddab789034368bab12c'
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.9/github-nippou_v4.2.9_linux_amd64.zip'
-      sha256 'c58e5df633cab1666d6877ecae51c2090e9ac28863b0aa555cc99b0bd7e5b363'
+      url 'https://github.com/masutaka/github-nippou/releases/download/v4.2.10/github-nippou_v4.2.10_linux_amd64.zip'
+      sha256 'a23df2b5ee9451b94e9cbda4e6fcbdbaccedc0e567d31bceef789c8fdf24287c'
     end
   end
 
