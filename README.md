@@ -6,8 +6,6 @@ A Homebrew formula for [github-nippou](https://github.com/masutaka/github-nippou
 
     $ brew install masutaka/tap/github-nippou
 
-## Maintenance
+## No maintenance required
 
-How to update the formula file(s) `*.rb`?
-
-    $ make update
+Whenever a new release is made on [github-nippou](https://github.com/masutaka/github-nippou), the formula file(s) in this repository is automatically updated.
