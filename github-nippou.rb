@@ -5,13 +5,13 @@
 class GithubNippou < Formula
   desc "Print today's your GitHub activity for issues and pull requests"
   homepage "https://github.com/masutaka/github-nippou"
-  version "4.2.32"
+  version "4.2.33"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.32/github-nippou_v4.2.32_darwin_amd64.zip"
-      sha256 "012f689fefc5e3149b98826742731b3b520445470fb518c53e9ee77ce7f2415e"
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_darwin_amd64.zip"
+      sha256 "d43337586b3fc164cf27d4e621a2c9c70308ada8d1dc92172d6f6c52ce09d082"
 
       def install
         bin.install 'github-nippou'
@@ -30,8 +30,8 @@ class GithubNippou < Formula
       end
     end
     on_arm do
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.32/github-nippou_v4.2.32_darwin_arm64.zip"
-      sha256 "49bfccdd4336094daf1e7e02cf85042d5dc69e933832aa1c24a57537f466800b"
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_darwin_arm64.zip"
+      sha256 "7509ef7ffb4ed8dafcc9ce7d7ab6f37312f42f566e91360ce0f1c023c4b82658"
 
       def install
         bin.install 'github-nippou'
@@ -54,8 +54,8 @@ class GithubNippou < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.32/github-nippou_v4.2.32_linux_amd64.zip"
-        sha256 "7a0a50c2d34e7c94be21e8850d13147362ed5be13ab6e040ef9e13285b1ebdb6"
+        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_linux_amd64.zip"
+        sha256 "465d4a472b4b9c2af2755ceb9de1ed33632e224093e3ca6fdf939ef1e0b96774"
 
         def install
           bin.install 'github-nippou'
@@ -76,8 +76,8 @@ class GithubNippou < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.32/github-nippou_v4.2.32_linux_arm64.zip"
-        sha256 "4f558d6c4cfa2bf11b91b4c3373a04674aec72567b9d4e44177521e984a27f68"
+        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_linux_arm64.zip"
+        sha256 "d95cf46a41ed18701e727ca69c038238e0af5d1c443635c7fa7e433db306a1de"
 
         def install
           bin.install 'github-nippou'
