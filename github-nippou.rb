@@ -5,13 +5,13 @@
 class GithubNippou < Formula
   desc "Print today's your GitHub activity for issues and pull requests"
   homepage "https://github.com/masutaka/github-nippou"
-  version "4.2.33"
+  version "4.2.34"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_darwin_amd64.zip"
-      sha256 "d43337586b3fc164cf27d4e621a2c9c70308ada8d1dc92172d6f6c52ce09d082"
+    if Hardware::CPU.intel?
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_darwin_amd64.zip"
+      sha256 "eaca71da746c28df055940b73eb1503bbad7e1cc22c181dbf0a60c8e34363a32"
 
       def install
         bin.install 'github-nippou'
@@ -29,9 +29,9 @@ class GithubNippou < Formula
         (zsh_completion/'_github-nippou').write output
       end
     end
-    on_arm do
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_darwin_arm64.zip"
-      sha256 "7509ef7ffb4ed8dafcc9ce7d7ab6f37312f42f566e91360ce0f1c023c4b82658"
+    if Hardware::CPU.arm?
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_darwin_arm64.zip"
+      sha256 "1fe472bf8de094cc557830c5f2f12bb36d062756672ae38b9e74ab6ef02b0b81"
 
       def install
         bin.install 'github-nippou'
@@ -52,10 +52,10 @@ class GithubNippou < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_linux_amd64.zip"
-        sha256 "465d4a472b4b9c2af2755ceb9de1ed33632e224093e3ca6fdf939ef1e0b96774"
+        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_linux_amd64.zip"
+        sha256 "45d1821f83ec8dd5780d18a6f395187eff6f7fa78cdef1a4472913fd4f1896d8"
 
         def install
           bin.install 'github-nippou'
@@ -74,10 +74,10 @@ class GithubNippou < Formula
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.33/github-nippou_v4.2.33_linux_arm64.zip"
-        sha256 "d95cf46a41ed18701e727ca69c038238e0af5d1c443635c7fa7e433db306a1de"
+        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_linux_arm64.zip"
+        sha256 "0cc50883fef92673c76b6520698f60fb7b2e1e10f09367fb1ee3cb0e932e795c"
 
         def install
           bin.install 'github-nippou'
