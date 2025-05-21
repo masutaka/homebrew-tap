@@ -5,13 +5,13 @@
 class GithubNippou < Formula
   desc "Print today's your GitHub activity for issues and pull requests"
   homepage "https://github.com/masutaka/github-nippou"
-  version "4.2.34"
+  version "4.2.35"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_darwin_amd64.zip"
-      sha256 "eaca71da746c28df055940b73eb1503bbad7e1cc22c181dbf0a60c8e34363a32"
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.35/github-nippou_v4.2.35_darwin_amd64.zip"
+      sha256 "36b9c054c242e942e537141f9c5b2d891c5e127847602457dae48504192f229d"
 
       def install
         bin.install 'github-nippou'
@@ -30,8 +30,8 @@ class GithubNippou < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_darwin_arm64.zip"
-      sha256 "1fe472bf8de094cc557830c5f2f12bb36d062756672ae38b9e74ab6ef02b0b81"
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.35/github-nippou_v4.2.35_darwin_arm64.zip"
+      sha256 "550e91e354ca038118d3b20f9057beb62808222ddd000918e1d01d07f219b6ac"
 
       def install
         bin.install 'github-nippou'
@@ -52,48 +52,42 @@ class GithubNippou < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_linux_amd64.zip"
-        sha256 "45d1821f83ec8dd5780d18a6f395187eff6f7fa78cdef1a4472913fd4f1896d8"
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.35/github-nippou_v4.2.35_linux_amd64.zip"
+      sha256 "0824a9013bb5ae0945e851b2bde47c2f2fd2f628fcc8155cc9028b58641c892f"
+      def install
+        bin.install 'github-nippou'
 
-        def install
-          bin.install 'github-nippou'
+        # Install bash completion
+        output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'bash')
+        (bash_completion/'github-nippou').write output
 
-          # Install bash completion
-          output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'bash')
-          (bash_completion/'github-nippou').write output
+        # Install fish completion
+        output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'fish')
+        (fish_completion/'github-nippou.fish').write output
 
-          # Install fish completion
-          output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'fish')
-          (fish_completion/'github-nippou.fish').write output
-
-          # Install zsh completion
-          output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'zsh')
-          (zsh_completion/'_github-nippou').write output
-        end
+        # Install zsh completion
+        output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'zsh')
+        (zsh_completion/'_github-nippou').write output
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/masutaka/github-nippou/releases/download/v4.2.34/github-nippou_v4.2.34_linux_arm64.zip"
-        sha256 "0cc50883fef92673c76b6520698f60fb7b2e1e10f09367fb1ee3cb0e932e795c"
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.35/github-nippou_v4.2.35_linux_arm64.zip"
+      sha256 "771df3dcc3216897d20a9b8ea927ce85a799a85e1a26669e2da25cd222336f96"
+      def install
+        bin.install 'github-nippou'
 
-        def install
-          bin.install 'github-nippou'
+        # Install bash completion
+        output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'bash')
+        (bash_completion/'github-nippou').write output
 
-          # Install bash completion
-          output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'bash')
-          (bash_completion/'github-nippou').write output
+        # Install fish completion
+        output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'fish')
+        (fish_completion/'github-nippou.fish').write output
 
-          # Install fish completion
-          output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'fish')
-          (fish_completion/'github-nippou.fish').write output
-
-          # Install zsh completion
-          output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'zsh')
-          (zsh_completion/'_github-nippou').write output
-        end
+        # Install zsh completion
+        output = Utils.safe_popen_read("#{bin}/github-nippou", 'completion', 'zsh')
+        (zsh_completion/'_github-nippou').write output
       end
     end
   end
