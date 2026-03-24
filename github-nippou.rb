@@ -5,15 +5,15 @@
 class GithubNippou < Formula
   desc "Print today's your GitHub activity for issues and pull requests"
   homepage "https://github.com/masutaka/github-nippou"
-  version "4.2.45"
+  version "4.2.46"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.45/github-nippou_v4.2.45_darwin_amd64.zip"
-      sha256 "aa3a21be74d5c7ee60b7af220f4ee71b49512b9ff76927d36dc9bea23937feb2"
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.46/github-nippou_v4.2.46_darwin_amd64.zip"
+      sha256 "497a232418355d29445c8568d909728305e2bdfadbbd26c6222058f2822ad8ce"
 
-      def install
+      define_method(:install) do
         bin.install 'github-nippou'
 
         # Install bash completion
@@ -30,10 +30,10 @@ class GithubNippou < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.45/github-nippou_v4.2.45_darwin_arm64.zip"
-      sha256 "53a59021aec0ac33145a8a901007efcb0cbf8acaea9c75c024e3b0a9b7639cb5"
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.46/github-nippou_v4.2.46_darwin_arm64.zip"
+      sha256 "2c8c3e03f2a4a868297e5166d354ffef9220c8a634aa76e7bf4383e36329c16e"
 
-      def install
+      define_method(:install) do
         bin.install 'github-nippou'
 
         # Install bash completion
@@ -53,9 +53,9 @@ class GithubNippou < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.45/github-nippou_v4.2.45_linux_amd64.zip"
-      sha256 "b17e500ef09495767998819e9784ff5195d1fb8316bf2aaf3009c63007fce798"
-      def install
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.46/github-nippou_v4.2.46_linux_amd64.zip"
+      sha256 "6abea8f1ed163a72765baef8905416034ae319ea201fdede4e460e91363f4198"
+      define_method(:install) do
         bin.install 'github-nippou'
 
         # Install bash completion
@@ -72,9 +72,9 @@ class GithubNippou < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.45/github-nippou_v4.2.45_linux_arm64.zip"
-      sha256 "4c969b6a5841c4d33d3a99479523e999a8ffc904c091d20283aa11cd6f0899dc"
-      def install
+      url "https://github.com/masutaka/github-nippou/releases/download/v4.2.46/github-nippou_v4.2.46_linux_arm64.zip"
+      sha256 "18efd6cba1f4508abaff973c2a9c9d1aa20b75a2c73fbe7827e7bcc950891478"
+      define_method(:install) do
         bin.install 'github-nippou'
 
         # Install bash completion
